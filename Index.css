@@ -1,0 +1,402 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(147deg, #000000 0%, #434343 74%);
+    max-width: 100%;
+    height: 100vh;
+}
+
+/* my autoText typing effect and logo  */
+
+.logo {
+    color: #fff;
+    background-color: #393e46;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50px;
+    margin-left: 35%;
+    margin-top: 8vh;
+    width: 450px;
+    height: 70px;
+    font-weight: 500;
+    font-size: 40px;
+    position: absolute;
+    transition: 0.5s;
+}
+
+
+.logo:hover {
+    background-color: #3bd9d9;
+    box-shadow: 0px 5px 20px #3bd9d9;
+    color: #ffffff;
+    transform: translateY(-7px);
+}
+
+/* Neuromorphism side bar  */
+
+.Side-el {
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    height: 0px;
+    background-color: #ecf0f3;
+}
+
+.side-bar {
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    top: 0;
+    left: 510%;
+    padding: 12px;
+    background: #ecf0f3;
+    box-shadow: -3px -3px 7px #ffffff,
+        3px 3px 5px #ceced1,
+        inset 3px -3px 7px #ffffff,
+        inset 3px 3px 5px #ceced1;
+    transition: all 0.1s ease;
+}
+
+.side-bar .title {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.side-bar .title .logo1 {
+    font-size: 27px;
+    font-weight: 600;
+    color: #31344b;
+}
+
+.side-bar ul {
+    margin-top: 35px;
+    list-style: none;
+}
+
+.side-bar ul a {
+    color: #31344b;
+    text-decoration: none;
+    display: block;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 6px;
+    box-shadow: -3px -3px 7px #ffffff,
+        3px 3px 5px #ceced1;
+    position: relative;
+}
+
+.side-bar ul i {
+    margin-right: 10px;
+}
+
+.media-icons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.media-icons a {
+    margin: 0 14px;
+    font-size: 17px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    box-shadow: -3px -3px 7px #ffffff,
+        3px 3px 5px #ceced1;
+    position: relative;
+}
+
+.side-bar ul a:hover::before,
+.media-icons a:hover::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 3px -3px 7px #ffffff,
+        inset 3px 3px 5px #ceced1;
+}
+
+.side-bar ul a:hover::before {
+    border-radius: 6px;
+}
+
+.side-bar ul a:hover {
+    color: #3498db;
+}
+
+.media-icons a:hover::before {
+    border-radius: 50%;
+}
+
+.media-icons a:nth-child(1) {
+    color: black;
+}
+
+.media-icons a:nth-child(2) {
+    color: #0A66C2;
+}
+
+.media-icons a:nth-child(3) {
+    color: #4267b2;
+}
+
+.media-icons a:nth-child(4) {
+    color: red;
+}
+
+label {
+    font-size: 17px;
+    color: #31344b;
+    box-shadow: 3px -3px 7px #ffffff,
+        3px 3px 5px #ceced1;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 37px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.bars {
+    color: #fff;
+    position: absolute;
+    left: 25px;
+    top: 48px;
+}
+
+label:hover {
+    box-shadow: inset 3px -3px 7px #ffffff,
+        inset 3px 3px 5px #ceced1;
+    color: #3498db;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.side-bar {
+    left: 0;
+}
+
+/* My self component with image  */
+
+.my-image {
+    position: relative;
+    margin-top: 40vh;
+    margin-right: 55%;
+    background-color: linear-gradient(147deg, #000000 0%, #434343 74%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+.my-image::before {
+    content: '';
+    position: absolute;
+    inset: -10px 100px;
+    background: linear-gradient(315deg, #00ccff, #d400d4);
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+.my-image:hover::before {
+    inset: -20px 0px;
+}
+
+.my-image::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background-color: linear-gradient(147deg, #000000 0%, #434343 74%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.image {
+    position: absolute;
+    inset: 5px;
+    border: 1px solid #070a1c;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: 0.5s;
+    object-fit: cover;
+    z-index: 3;
+}
+
+.my-image:hover .image img {
+    opacity: 0;
+}
+
+.image h2 {
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.image h2 span {
+    font: 300;
+    font-size: 0.75em;
+}
+
+.image a {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #070a1c;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.image a:hover {
+    letter-spacing: 0.2em;
+}
+
+.intro {
+    background-color: #00ccff;
+    position: relative;
+    margin-top: 40vh;
+    margin-right: 15%;
+    height: 50%;
+    width: 37%;
+}
+
+/* image slider component */
+
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+.img-slider {
+    border: none;
+    outline: none;
+    position: relative;
+    margin-left: 30vh;
+    background: linear-gradient(147deg, #000000 0%, #434343 74%);
+    width: 65%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    font-family: "Muli", sans-serif;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+/* page 2 css */
+
+
+/* page 3 css */
+
+.page-3 {
+    padding-left: 2%;
+    margin-top: 30vh;
+}
