@@ -315,7 +315,8 @@ label:hover {
 }
 
 .intro {
-    background-color: #00ccff;
+    background-color: #ffffff;
+    background-blend-mode:multiply;
     position: relative;
     margin-top: 40vh;
     margin-right: 15%;
