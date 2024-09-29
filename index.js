@@ -1,7 +1,7 @@
 // AutoText typing effect JS
 
 var typed = new Typed(".new-word", {
-  strings: [" Rajat Yadav", "a Programmer", "a Student"],
+  strings: [" Learning DL/AI/Data analytics", "a Programmer", "a Student"],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true
